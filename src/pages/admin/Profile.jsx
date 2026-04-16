@@ -27,7 +27,7 @@ export default function AdminProfile() {
     password_confirmation: ""
   });
 
-  const { data: user, isLoading } = useQuery({
+  const { data: user } = useQuery({
     queryKey: ["admin-profile"],
     queryFn: fetchAdminProfile,
   });

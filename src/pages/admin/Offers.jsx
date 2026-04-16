@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import AppShell from "../../components/layout/AppShell";
 import { Card, Input, Select, Badge, Button, Skeleton } from "../../components";
 import { fetchAdminOffers } from "../../services/endpoints";
-import { IoSearchOutline, IoEyeOutline, IoFlagOutline } from "react-icons/io5";
+import { IoEyeOutline, IoFlagOutline } from "react-icons/io5";
 
 export default function Offers() {
   const [filters, setFilters] = useState({ status: "", type: "", search: "" });

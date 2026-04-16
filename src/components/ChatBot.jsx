@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { FaRobot, FaPaperPlane, FaTimes, FaMinus, FaChevronUp } from "react-icons/fa";
-import { Button } from "../components";
+import { FaRobot, FaPaperPlane, FaTimes, FaChevronUp } from "react-icons/fa";
 import { toast } from "react-toastify";
 
 const HF_API_URL = "https://api-inference.huggingface.co/models/facebook/blenderbot-400M-distill";

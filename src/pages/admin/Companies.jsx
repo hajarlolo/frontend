@@ -4,7 +4,7 @@ import AppShell from "../../components/layout/AppShell";
 import { Card, Input, Select, Badge, Button, Skeleton, Modal } from "../../components";
 import { fetchAdminCompanies, adminDecisionVerification, fetchAccountDocument } from "../../services/endpoints";
 import { api as axios } from "../../services/api";
-import { IoSearchOutline, IoEyeOutline, IoMailOutline, IoCheckmarkOutline, IoCloseOutline, IoRefreshOutline, IoExpandOutline } from "react-icons/io5";
+import { IoSearchOutline, IoEyeOutline, IoCheckmarkOutline, IoCloseOutline, IoRefreshOutline, IoExpandOutline } from "react-icons/io5";
 
 const BACKEND_URL = axios.defaults.baseURL;
 

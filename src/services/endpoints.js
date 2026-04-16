@@ -1,5 +1,4 @@
 import { api, ensureCsrfCookie } from "./api";
-import { UNIVERSITIES } from "../constants/universities";
 
 export const endpoints = {
   // Auth + registration
@@ -65,32 +64,6 @@ function normalizeText(value) {
     .trim();
 }
 
-function fuzzySortUniversities(term, universities) {
-  const q = normalizeText(term);
-  if (!q) return universities.slice(0, 12);
-
-  const scored = universities
-    .map((item) => {
-      const name = normalizeText(item.name);
-      if (!name) return null;
-
-      let score = 0;
-      if (name === q) score += 100;
-      if (name.startsWith(q)) score += 80;
-      if (name.includes(q)) score += 55;
-
-      const tokens = name.split(/\s+|[-()]/).filter(Boolean);
-      const acronym = tokens.map((token) => token[0]).join("");
-      if (acronym.includes(q)) score += 65;
-      if (tokens.some((token) => token.startsWith(q))) score += 40;
-
-      return { ...item, score };
-    })
-    .filter((item) => item && item.score > 0)
-    .sort((a, b) => b.score - a.score || a.name.localeCompare(b.name, "fr"));
-
-  return scored.slice(0, 12).map(({ id, name }) => ({ id, name }));
-}
 
 export async function searchUniversities(term) {
   const query = String(term || "").trim();

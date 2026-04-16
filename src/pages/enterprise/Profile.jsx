@@ -6,7 +6,7 @@ import { Card, Button, Input, Select } from "../../components";
 import { api as axios } from "../../services/api";
 import { FaCamera, FaStar, FaQuoteRight } from "react-icons/fa";
 import { getStorageUrl } from "../../utils/helpers";
-import { Avatar, Badge } from "../../components";
+import { Avatar } from "../../components";
 
 export default function EnterpriseProfile() {
   const queryClient = useQueryClient();

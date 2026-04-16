@@ -10,8 +10,6 @@ import { Controller } from 'react-hook-form';
 import { useQuery } from '@tanstack/react-query';
 import CvParser from '../../components/common/CvParser';
 import { api } from '../../services/api';
-import { fetchAllUniversities } from '../../services/endpoints';
-import { UNIVERSITIES } from '../../constants/universities';
 
 const profileSchema = z.object({
   nom_complet: z.string().min(1, 'Nom requis'),
@@ -61,11 +59,6 @@ export default function ProfileSetup() {
   const navigate = useNavigate();
   const [showCvParser, setShowCvParser] = useState(true);
   const [parsedData, setParsedData] = useState(null);
-
-  const { data: dbUniversities = [], isLoading: isLoadingUnis } = useQuery({
-    queryKey: ['universities'],
-    queryFn: fetchAllUniversities,
-  });
 
   const {
     register,
@@ -121,9 +114,7 @@ export default function ProfileSetup() {
   });
 
   const {
-    fields: certificatFields,
     append: appendCertificat,
-    remove: removeCertificat,
   } = useFieldArray({
     control,
     name: 'certificats',
@@ -336,16 +327,7 @@ export default function ProfileSetup() {
                   className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-violet focus:border-transparent"
                 >
                   <option value="">Sélectionnez une université</option>
-                  {isLoadingUnis ? (
-                    <option disabled>Chargement...</option>
-                  ) : (
-                    dbUniversities.map((uni) => (
-                      <option key={uni.id} value={uni.id}>
-                        {uni.name}
-                      </option>
-                    ))
-                  )}
-                </select>
+                                    </select>
                 {errors.universite_id?.message && (
                   <p className="text-red-500 text-sm mt-1">{errors.universite_id?.message}</p>
                 )}

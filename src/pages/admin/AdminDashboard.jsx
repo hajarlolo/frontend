@@ -3,7 +3,6 @@ import { useNavigate, Link } from "react-router-dom";
 import {
   IoBusinessOutline,
   IoPersonOutline,
-  IoTrendingUpOutline,
   IoBriefcaseOutline,
   IoStatsChartOutline
 } from "react-icons/io5";

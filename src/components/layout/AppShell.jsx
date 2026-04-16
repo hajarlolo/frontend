@@ -28,7 +28,7 @@ export default function AppShell({ title, subtitle, actions, children, showSideb
   const [showNotifications, setShowNotifications] = useState(false);
   const notificationRef = useRef(null);
 
-  const { data: notificationData, refetch: refetchUnread } = useQuery({
+  const { data: notificationData } = useQuery({
     queryKey: ["unread-notifications-count"],
     queryFn: () => import("../../services/endpoints").then(m => m.fetchUnreadNotificationsCount()),
     refetchInterval: 10000, 

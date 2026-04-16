@@ -1,4 +1,4 @@
-﻿import { IoArrowBack, IoDocumentTextOutline, IoMailOutline } from "react-icons/io5";
+import { IoArrowBack, IoDocumentTextOutline, IoMailOutline } from "react-icons/io5";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import AuthShell from "../../components/layout/AuthShell";

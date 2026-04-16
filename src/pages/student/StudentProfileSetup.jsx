@@ -1,4 +1,4 @@
-﻿import { IoDocumentTextOutline, IoPencilOutline } from "react-icons/io5";
+import { IoDocumentTextOutline, IoPencilOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import AuthShell from "../../components/layout/AuthShell";
 import { Card, StepIndicator } from "../../components";

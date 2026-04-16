@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import AppShell from "../../components/layout/AppShell";
-import { Card, Button, Input } from "../../components";
-import { FaRobot, FaUser, FaPaperPlane, FaTimes, FaCircle, FaInfoCircle, FaHeadset, FaFileAlt, FaPlus, FaTrash, FaExpand, FaCompress } from "react-icons/fa";
+import { Card, Button } from "../../components";
+import { FaRobot, FaUser, FaPaperPlane, FaPlus, FaTrash, FaExpand, FaCompress } from "react-icons/fa";
 import { api } from "../../services/api";
 
 export default function Chatbot() {
@@ -29,7 +29,7 @@ export default function Chatbot() {
   }, [sessions]);
 
   const currentSession = sessions.find(s => s.id === activeSessionId) || sessions[0];
-  const messages = currentSession?.messages || [];
+  const messages = useMemo(() => currentSession?.messages || [], [currentSession]);
 
   const updateMessages = (newMessages) => {
     setSessions(prev => prev.map(s => {

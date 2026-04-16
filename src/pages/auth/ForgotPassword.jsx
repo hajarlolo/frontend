@@ -8,15 +8,12 @@ import AuthShell from "../../components/layout/AuthShell";
 import { Button, Input } from "../../components";
 import { api, getApiErrorMessage } from "../../services/api";
 import { toast } from "react-toastify";
-import { FaEnvelope, FaLock, FaKey, FaArrowLeft, FaCheck } from "react-icons/fa";
+import { FaEnvelope, FaLock, FaArrowLeft, FaCheck } from "react-icons/fa";
 
 const emailSchema = z.object({
   email: z.string().email("Email invalide."),
 });
 
-const codeSchema = z.object({
-  code: z.string().length(6, "Le code doit contenir 6 chiffres."),
-});
 
 const passwordSchema = z.object({
   password: z.string().min(8, "Minimum 8 caractères."),

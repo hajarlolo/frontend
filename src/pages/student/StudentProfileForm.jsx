@@ -311,7 +311,7 @@ export default function StudentProfileForm() {
                 {photoPreview ? (
                   <img
                     src={photoPreview}
-                    alt="Aperçu photo profil"
+                    alt="profile"
                     className="h-24 w-24 rounded-2xl border border-slate-200 object-cover"
                   />
                 ) : null}

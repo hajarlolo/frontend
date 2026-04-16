@@ -434,20 +434,20 @@ export default function Home() {
             <div className="md:col-span-2 space-y-6">
               <h4 className="text-white font-black text-lg uppercase tracking-widest">Platform</h4>
               <ul className="space-y-4 font-bold">
-                <li><a href="#" className="hover:text-white transition-colors">For Students</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">For Companies</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">AI Matcher</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Resources</a></li>
+                <li><a href="#!" className="hover:text-white transition-colors">For Students</a></li>
+                <li><a href="#!" className="hover:text-white transition-colors">For Companies</a></li>
+                <li><a href="#!" className="hover:text-white transition-colors">AI Matcher</a></li>
+                <li><a href="#!" className="hover:text-white transition-colors">Resources</a></li>
               </ul>
             </div>
 
             <div className="md:col-span-2 space-y-6">
               <h4 className="text-white font-black text-lg uppercase tracking-widest">Company</h4>
               <ul className="space-y-4 font-bold">
-                <li><a href="#" className="hover:text-white transition-colors">Our Vision</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Press Kit</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
+                <li><a href="#!" className="hover:text-white transition-colors">Our Vision</a></li>
+                <li><a href="#!" className="hover:text-white transition-colors">Careers</a></li>
+                <li><a href="#!" className="hover:text-white transition-colors">Press Kit</a></li>
+                <li><a href="#!" className="hover:text-white transition-colors">Contact</a></li>
               </ul>
             </div>
 
@@ -466,9 +466,9 @@ export default function Home() {
           <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
             <p className="font-bold">&copy; {new Date().getFullYear()} TalentLink Global. All rights reserved.</p>
             <div className="flex gap-10 font-bold text-sm">
-              <a href="#" className="hover:text-white">Privacy Policy</a>
-              <a href="#" className="hover:text-white">Terms of Service</a>
-              <a href="#" className="hover:text-white">Cookie Policy</a>
+              <a href="#!" className="hover:text-white">Privacy Policy</a>
+              <a href="#!" className="hover:text-white">Terms of Service</a>
+              <a href="#!" className="hover:text-white">Cookie Policy</a>
             </div>
           </div>
         </div>

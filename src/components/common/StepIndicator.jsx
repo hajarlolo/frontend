@@ -1,4 +1,4 @@
-﻿export default function StepIndicator({ current = 1, total = 1, label }) {
+export default function StepIndicator({ current = 1, total = 1, label }) {
   const safeCurrent = Math.min(Math.max(current, 1), total);
 
   return (

@@ -1,4 +1,4 @@
-﻿import { Link, useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import AuthShell from "../../components/layout/AuthShell";
 import { Badge, Button, Card, StepIndicator } from "../../components";
 import { useAuth } from "../../hooks";

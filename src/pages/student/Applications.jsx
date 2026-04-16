@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import AppShell from "../../components/layout/AppShell";
 import { Card, Badge, Modal, Button, EvaluationModal } from "../../components";
-import { FaPaperPlane, FaFilter, FaCalendarAlt, FaStar, FaFileDownload, FaBuilding, FaInfoCircle, FaCheckCircle, FaClock, FaTimesCircle } from "react-icons/fa";
+import { FaPaperPlane, FaCalendarAlt, FaStar, FaFileDownload, FaBuilding, FaInfoCircle, FaCheckCircle, FaClock, FaTimesCircle } from "react-icons/fa";
 import { api } from "../../services/api";
 import { useAuth } from "../../context/AuthContext";
 

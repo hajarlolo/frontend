@@ -1,4 +1,4 @@
-﻿export const UNIVERSITIES = [
+export const UNIVERSITIES = [
   { id: 1, name: "Université Internationale de Rabat (UIR)" },
   { id: 2, name: "Université Mohammed VI des Sciences de Santé (UM6SS) - Casablanca" },
   { id: 3, name: "Université Internationale Abulcasis des Sciences de Santé (UIASS) - Rabat" },

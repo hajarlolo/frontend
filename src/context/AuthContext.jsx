@@ -38,7 +38,7 @@ export function AuthProvider({ children }) {
     };
 
     checkSession();
-  }, []);
+  }, [user]);
 
   const value = useMemo(
     () => ({

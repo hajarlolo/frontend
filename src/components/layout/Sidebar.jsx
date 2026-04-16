@@ -4,12 +4,10 @@ import {
   FaBriefcase, 
   FaGraduationCap, 
   FaUserTie, 
-  FaUserCircle,
   FaFileAlt,
   FaSearch,
   FaPaperPlane,
   FaRobot,
-  FaQrcode
 } from "react-icons/fa";
 
 import { useAuth } from "../../hooks";

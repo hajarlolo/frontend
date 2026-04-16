@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import AppShell from "../../components/layout/AppShell";
-import { Card, Button, Input, Badge } from "../../components";
-import { FaCloudUploadAlt, FaHistory, FaCheckCircle, FaSearch, FaSyncAlt, FaFilePdf, FaCheckSquare } from "react-icons/fa";
+import { Card, Button, Badge } from "../../components";
+import { FaCloudUploadAlt, FaCheckCircle, FaSearch, FaSyncAlt, FaFilePdf } from "react-icons/fa";
 import { toast } from "react-toastify";
 
 export default function StudentCvScanner() {
