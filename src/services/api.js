@@ -1,7 +1,20 @@
 import axios from "axios";
 
-// Force correct API base URL since environment variables aren't being picked up
-const normalizedBaseUrl = "http://localhost:8000/api";
+const DEFAULT_API_BASE_URL = "https://backend-main-eewlac.free.laravel.cloud/api";
+
+function normalizeApiBaseUrl(rawUrl) {
+  const trimmed = String(rawUrl || "").trim();
+  if (!trimmed) return DEFAULT_API_BASE_URL;
+
+  const withoutTrailingSlash = trimmed.replace(/\/+$/, "");
+  return /\/api$/i.test(withoutTrailingSlash)
+    ? withoutTrailingSlash
+    : `${withoutTrailingSlash}/api`;
+}
+
+const normalizedBaseUrl = normalizeApiBaseUrl(
+  process.env.REACT_APP_API_BASE_URL || process.env.REACT_APP_API_URL || DEFAULT_API_BASE_URL
+);
 
 export const api = axios.create({
   baseURL: normalizedBaseUrl,
