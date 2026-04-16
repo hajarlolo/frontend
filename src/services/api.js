@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const DEFAULT_API_BASE_URL = "https://backend-main-eewlac.free.laravel.cloud/api";
+const DEFAULT_API_BASE_URL = "https://backend-main-eewlac.free.laravel.cloud";
 
 function normalizeApiBaseUrl(rawUrl) {
   const trimmed = String(rawUrl || "").trim();
