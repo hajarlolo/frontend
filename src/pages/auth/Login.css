@@ -1,0 +1,33 @@
+.login-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.login-footer-text {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+.login-footer-link {
+  color: #6d28d9;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.login-footer-link:hover {
+  text-decoration: underline;
+}
+
+.login-error-box {
+  border-radius: 0.75rem;
+  border: 1px solid #fecdd3;
+  background: #fff1f2;
+  color: #be123c;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.9rem;
+}
+
+.login-submit {
+  width: 100%;
+}

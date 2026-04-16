@@ -1,0 +1,45 @@
+.evaluation-modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0.5rem;
+}
+
+.evaluation-instruction {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.star-rating-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.star-rating-container input[type="radio"] {
+  display: none;
+}
+
+.star {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.star:hover {
+  transform: scale(1.1);
+}
+
+.rating-label {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.evaluation-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
