@@ -56,14 +56,6 @@ export const endpoints = {
   markNotificationRead: (id) => `/notifications/${id}`,
 };
 
-function normalizeText(value) {
-  return String(value || "")
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase()
-    .trim();
-}
-
 
 export async function searchUniversities(term) {
   const query = String(term || "").trim();

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { Controller, useFieldArray, useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -29,7 +29,6 @@ import { getStorageUrl } from "../../utils/storageUrl";
 import { api } from "../../services/api";
 import { toast } from "react-toastify";
 import { 
-  FaUser, 
   FaTools, 
   FaGraduationCap, 
   FaBriefcase, 

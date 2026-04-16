@@ -2,7 +2,6 @@ import { Controller, useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation, useQuery } from "@tanstack/react-query";
-import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import AuthShell from "../../components/layout/AuthShell";
 import { Button, Card, FileDropzone } from "../../components";
@@ -15,7 +14,6 @@ const schema = z.object({
 });
 
 export default function ResubmitDocument() {
-  const navigate = useNavigate();
   const { user, logout } = useAuth();
   const [submitError, setSubmitError] = useState("");
   const [successMessage, setSuccessMessage] = useState("");

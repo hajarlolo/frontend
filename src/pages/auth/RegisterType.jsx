@@ -2,7 +2,7 @@ import { IoBusinessOutline, IoSchoolOutline } from "react-icons/io5";
 import { FiZap, FiArrowRight } from "react-icons/fi";
 import { Link, useNavigate } from "react-router-dom";
 import AuthShell from "../../components/layout/AuthShell";
-import { Card, StepIndicator } from "../../components";
+import { StepIndicator } from "../../components";
 
 const accountTypes = [
   {

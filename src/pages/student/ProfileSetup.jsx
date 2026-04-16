@@ -7,7 +7,6 @@ import { FaTimes, FaSave, FaArrowLeft } from 'react-icons/fa';
 import AppShell from '../../components/layout/AppShell';
 import { Button, Card, Input, TagsInput } from '../../components';
 import { Controller } from 'react-hook-form';
-import { useQuery } from '@tanstack/react-query';
 import CvParser from '../../components/common/CvParser';
 import { api } from '../../services/api';
 

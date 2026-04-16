@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import AppShell from "../../components/layout/AppShell";
-import { Card, Button, Input, Modal, Badge } from "../../components";
-import { FaSearch, FaFilter, FaMapMarkerAlt, FaFileAlt, FaCloudUploadAlt, FaCheckCircle } from "react-icons/fa";
+import { Card, Button, Modal } from "../../components";
+import { FaSearch, FaMapMarkerAlt, FaFileAlt, FaCheckCircle } from "react-icons/fa";
 import { api } from "../../services/api";
 import { toast } from "react-toastify";
 import { getStorageUrl } from "../../utils/helpers";
@@ -50,32 +50,6 @@ export default function StudentOffers() {
     setSelectedOffer(offer);
     setIsModalOpen(true);
     setFiles({});
-  };
-
-  const handleFileChange = (e) => {
-    const selectedFiles = Array.from(e.target.files);
-    const docRequired = selectedOffer?.document_requise || "";
-    const isMultipleAllowed = docRequired.includes(",");
-
-    if (!isMultipleAllowed && selectedFiles.length > 1) {
-      toast.error("Un seul fichier est autorisé pour cette offre.");
-      return;
-    }
-    setFiles(selectedFiles);
-  };
-
-  const handleApply = () => {
-    if (selectedOffer.document_requise && files.length === 0) {
-      toast.error("Veuillez joindre les documents requis.");
-      return;
-    }
-
-    const formData = new FormData();
-    formData.append("offer_id", selectedOffer.id_offre_stage || selectedOffer.id_offre_emploi || selectedOffer.id_mission);
-    formData.append("type", selectedOffer.type);
-    files.forEach((file) => formData.append("files[]", file));
-
-    applyMutation.mutate(formData);
   };
 
   const getOfferTypeLabel = (type) => {

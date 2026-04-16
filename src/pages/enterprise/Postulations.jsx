@@ -4,17 +4,15 @@ import AppShell from "../../components/layout/AppShell";
 import { Card, Button, Modal, Avatar, Badge, EvaluationModal } from "../../components";
 import { api as axios } from "../../services/api";
 import { UNIVERSITIES } from "../../constants/universities";
-import { useAuth } from "../../context/AuthContext";
 import { 
-  FaFileDownload, FaFilter, FaTools, FaGraduationCap, FaBriefcase, FaCalendarAlt, 
-  FaUniversity, FaMapMarkerAlt, FaEnvelope, FaPhone, FaGlobe, FaCertificate, FaCode,
+  FaFileDownload, FaTools, FaGraduationCap, FaBriefcase,
+  FaUniversity, FaMapMarkerAlt, FaEnvelope, FaPhone, FaCertificate, FaCode,
   FaStar
 } from "react-icons/fa";
 
 const BACKEND_URL = axios.defaults.baseURL;
 
 export default function Postulations() {
-  const { user } = useAuth();
   const [activeTab, setActiveTab] = useState('all');
   const [selectedStudentId, setSelectedStudentId] = useState(null);
   const [viewingDocs, setViewingDocs] = useState(null);
